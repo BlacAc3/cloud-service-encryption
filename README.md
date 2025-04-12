@@ -20,5 +20,5 @@ Before you begin, ensure you have the following installed:
 To run the script, use the following command:
 
 ```bash
-python cloud_encryption_demo.py
+python main.py
 ```
