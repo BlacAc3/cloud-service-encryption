@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QTabWidget, QWidget, QLa
                             QVBoxLayout, QHBoxLayout, QGridLayout, QLineEdit, QTextEdit, QListWidget,
                             QFileDialog, QFrame, QGroupBox, QMessageBox, QScrollArea, QStatusBar)
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QColor
 
 # ---------- Symmetric Encryption Layer ----------
 def generate_symmetric_key():
@@ -153,10 +153,47 @@ class CloudEncryptionApp(QMainWindow):
         self.tab_control.setTabEnabled(2, False)
         self.tab_control.setTabEnabled(3, False)
 
-        # Status bar
+        # Status bar - Enhanced to be more prominent
         self.status_bar = QStatusBar()
+        self.status_bar.setMinimumHeight(40)  # Make it taller
+        self.status_bar.setStyleSheet("""
+            QStatusBar {
+                background-color: #F0F0F0;
+                border-top: 1px solid #CCCCCC;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        """)
         self.setStatusBar(self.status_bar)
-        self.status_bar.showMessage("Status: Ready")
+        self.show_status("Ready", is_error=False)
+
+    def show_status(self, message, is_error=False):
+        """Enhanced status message display with color coding for errors"""
+        if is_error:
+            self.status_bar.setStyleSheet("""
+                QStatusBar {
+                    background-color: #FFEBEE;
+                    color: #D32F2F;
+                    border-top: 2px solid #D32F2F;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 3px;
+                }
+            """)
+        else:
+            self.status_bar.setStyleSheet("""
+                QStatusBar {
+                    background-color: #F0F0F0;
+                    color: #2E7D32;
+                    border-top: 1px solid #CCCCCC;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 3px;
+                }
+            """)
+        self.status_bar.showMessage(f"Status: {message}")
+        # Make sure the status bar is visible
+        self.status_bar.setVisible(True)
 
     def setup_login_tab(self):
         layout = QVBoxLayout(self.tab_login)
@@ -401,7 +438,7 @@ class CloudEncryptionApp(QMainWindow):
 
         if self.rbac.authenticate(username, password):
             self.current_user = username
-            self.status_bar.showMessage(f"Status: Logged in as {username} ({self.rbac.users[username]['role']})")
+            self.show_status(f"Logged in as {username} ({self.rbac.users[username]['role']})")
 
             # Enable appropriate tabs based on role
             self.tab_control.setTabEnabled(1, True)  # Everyone can see encryption
@@ -419,11 +456,11 @@ class CloudEncryptionApp(QMainWindow):
             # Generate keys automatically
             self.generate_keys()
         else:
-            self.status_bar.showMessage("Status: Login failed. Invalid username or password.")
+            self.show_status("Login failed. Invalid username or password.", is_error=True)
 
     def generate_keys(self):
         if not self.current_user:
-            self.status_bar.showMessage("Status: Please login first.")
+            self.show_status("Please login first.", is_error=True)
             return
 
         # Show a "working" status
@@ -438,20 +475,20 @@ class CloudEncryptionApp(QMainWindow):
         time.sleep(1)
 
         self.key_status_label.setText("Keys generated successfully!")
-        self.status_bar.showMessage("Status: Cryptographic keys generated and ready for use.")
+        self.show_status("Cryptographic keys generated and ready for use.")
 
     def encrypt_text(self):
         if not self.symmetric_key:
-            self.status_bar.showMessage("Status: Please generate keys first.")
+            self.show_status("Please generate keys first.", is_error=True)
             return
 
         if not self.rbac.is_authorized(self.current_user, "encrypt"):
-            self.status_bar.showMessage(f"Status: User {self.current_user} is not authorized to encrypt data.")
+            self.show_status(f"User {self.current_user} is not authorized to encrypt data.", is_error=True)
             return
 
         text = self.plaintext.toPlainText().strip()
         if not text:
-            self.status_bar.showMessage("Status: Please enter text to encrypt.")
+            self.show_status("Please enter text to encrypt.", is_error=True)
             return
 
         # Encrypt the text
@@ -461,20 +498,20 @@ class CloudEncryptionApp(QMainWindow):
         self.ciphertext.clear()
         self.ciphertext.setText(base64.b64encode(encrypted).decode())
 
-        self.status_bar.showMessage("Status: Text encrypted successfully.")
+        self.show_status("Text encrypted successfully.")
 
     def decrypt_text(self):
         if not self.symmetric_key:
-            self.status_bar.showMessage("Status: Please generate keys first.")
+            self.show_status("Please generate keys first.", is_error=True)
             return
 
         if not self.rbac.is_authorized(self.current_user, "decrypt"):
-            self.status_bar.showMessage(f"Status: User {self.current_user} is not authorized to decrypt data.")
+            self.show_status(f"User {self.current_user} is not authorized to decrypt data.", is_error=True)
             return
 
-        text = self.ciphertext.toPlainText().strip()
+        text = self.plaintext.toPlainText().strip()
         if not text:
-            self.status_bar.showMessage("Status: No encrypted text to decrypt.")
+            self.show_status("No encrypted text to decrypt.", is_error=True)
             return
 
         try:
@@ -483,12 +520,15 @@ class CloudEncryptionApp(QMainWindow):
             decrypted = symmetric_decrypt(self.symmetric_key, encrypted_bytes)
 
             # Display
-            self.plaintext.clear()
-            self.plaintext.setText(decrypted)
+            self.ciphertext.clear()
+            if isinstance(decrypted, str):
+                self.ciphertext.setText(decrypted)
+            else:
+                self.ciphertext.setText(str(decrypted))
 
-            self.status_bar.showMessage("Status: Text decrypted successfully.")
+            self.show_status("Text decrypted successfully.")
         except Exception as e:
-            self.status_bar.showMessage(f"Status: Decryption error: {str(e)}")
+            self.show_status(f"Decryption error: {str(e)}", is_error=True)
 
     def browse_file(self):
         filename, _ = QFileDialog.getOpenFileName(self, "Select File")
@@ -497,16 +537,16 @@ class CloudEncryptionApp(QMainWindow):
 
     def upload_file(self):
         if not self.symmetric_key:
-            self.status_bar.showMessage("Status: Please generate keys first.")
+            self.show_status("Please generate keys first.", is_error=True)
             return
 
         if not self.rbac.is_authorized(self.current_user, "upload"):
-            self.status_bar.showMessage(f"Status: User {self.current_user} is not authorized to upload files.")
+            self.show_status(f"User {self.current_user} is not authorized to upload files.", is_error=True)
             return
 
         filename = self.selected_file_field.text()
         if not filename:
-            self.status_bar.showMessage("Status: Please select a file first.")
+            self.show_status("Please select a file first.", is_error=True)
             return
 
         try:
@@ -515,7 +555,7 @@ class CloudEncryptionApp(QMainWindow):
                 file_data = f.read()
 
             # Show progress status
-            self.status_bar.showMessage(f"Status: Encrypting file {os.path.basename(filename)}...")
+            self.show_status(f"Encrypting file {os.path.basename(filename)}...")
             QApplication.processEvents()
 
             # Encrypt the file
@@ -525,10 +565,10 @@ class CloudEncryptionApp(QMainWindow):
             cloud_filename = f"{os.path.basename(filename)}.encrypted"
             self.cloud.upload(cloud_filename, encrypted_data)
 
-            self.status_bar.showMessage(f"Status: File {os.path.basename(filename)} encrypted and uploaded as {cloud_filename}")
+            self.show_status(f"File {os.path.basename(filename)} encrypted and uploaded as {cloud_filename}")
             self.refresh_file_list()
         except Exception as e:
-            self.status_bar.showMessage(f"Status: Upload error: {str(e)}")
+            self.show_status(f"Upload error: {str(e)}", is_error=True)
 
     def refresh_file_list(self):
         # Clear existing list
@@ -556,33 +596,33 @@ class CloudEncryptionApp(QMainWindow):
 
     def download_file(self):
         if not self.symmetric_key:
-            self.status_bar.showMessage("Status: Please generate keys first.")
+            self.show_status("Please generate keys first.", is_error=True)
             return
 
         if not self.rbac.is_authorized(self.current_user, "download"):
-            self.status_bar.showMessage(f"Status: User {self.current_user} is not authorized to download files.")
+            self.show_status(f"User {self.current_user} is not authorized to download files.", is_error=True)
             return
 
         # Get selected file
         selected_items = self.file_listbox.selectedItems()
         if not selected_items:
-            self.status_bar.showMessage("Status: Please select a file to download.")
+            self.show_status("Please select a file to download.", is_error=True)
             return
 
         filename = selected_items[0].text()
 
         try:
             # Download the file
-            self.status_bar.showMessage(f"Status: Downloading file {filename}...")
+            self.show_status(f"Downloading file {filename}...")
             QApplication.processEvents()
 
             encrypted_data = self.cloud.download(filename)
             if not encrypted_data:
-                self.status_bar.showMessage(f"Status: File {filename} not found.")
+                self.show_status(f"File {filename} not found.", is_error=True)
                 return
 
             # Decrypt the file
-            self.status_bar.showMessage(f"Status: Decrypting file {filename}...")
+            self.show_status(f"Decrypting file {filename}...")
             QApplication.processEvents()
 
             try:
@@ -605,11 +645,11 @@ class CloudEncryptionApp(QMainWindow):
                     else:
                         f.write(decrypted_data)
 
-                self.status_bar.showMessage(f"Status: File {filename} downloaded and decrypted successfully.")
+                self.show_status(f"File {filename} downloaded and decrypted successfully.")
             else:
-                self.status_bar.showMessage("Status: File save cancelled.")
+                self.show_status("File save cancelled.")
         except Exception as e:
-            self.status_bar.showMessage(f"Status: Download error: {str(e)}")
+            self.show_status(f"Download error: {str(e)}", is_error=True)
 
 # Run the application
 if __name__ == "__main__":
