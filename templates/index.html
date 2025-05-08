@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Cloud Service Encryption{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">
+                <h3 class="card-title mb-0"><i class="bi bi-speedometer2"></i> Cloud Encryption Dashboard</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-primary text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-key"></i> Encryption</h4>
+            </div>
+            <div class="card-body">
+                <p>Generate encryption keys and encrypt/decrypt text messages.</p>
+                <p>This demonstrates how data can be secured before sending to cloud storage.</p>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('encryption') }}" class="btn btn-outline-primary">Go to Encryption</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-success text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-cloud"></i> Cloud Storage</h4>
+            </div>
+            <div class="card-body">
+                <p>Upload and download encrypted files to simulated cloud storage.</p>
+                <p>Files are automatically encrypted before storage and decrypted upon download.</p>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('cloud') }}" class="btn btn-outline-success">Go to Cloud Storage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-info text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-bar-chart"></i> Visualization</h4>
+            </div>
+            <div class="card-body">
+                <p>View diagrams illustrating the encryption and security process.</p>
+                <p>Understanding how data is protected is key to building trust in cloud systems.</p>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('visualization') }}" class="btn btn-outline-info">Go to Visualization</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

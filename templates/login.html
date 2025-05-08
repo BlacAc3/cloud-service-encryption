@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Cloud Service Encryption{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">                
+                <h3 class="card-title mb-0"><i class="bi bi-shield-lock"></i> Secure Login</h3>
+            </div>
+            <div class="card-body">
+                {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ error }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+
+                <form method="post" action="{{ url_for('login') }}">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4 shadow">
+            <div class="card-header bg-info text-white">
+                <h5 class="card-title mb-0"><i class="bi bi-info-circle"></i> Demo User Credentials</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text mb-3">For demonstration purposes, you can use these credentials:</p>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <th>Role</th>
+                                <th>Permissions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.password }}</td>
+                                <td><span class="badge bg-{{ 'primary' if user.role == 'admin' else 'success' if user.role == 'editor' else 'secondary' }}">{{ user.role }}</span></td>
+                                <td>
+                                    {% if user.role == 'admin' %}
+                                    <span class="badge rounded-pill bg-primary">encrypt</span>
+                                    <span class="badge rounded-pill bg-primary">decrypt</span>
+                                    <span class="badge rounded-pill bg-primary">upload</span>
+                                    <span class="badge rounded-pill bg-primary">download</span>
+                                    <span class="badge rounded-pill bg-primary">generate keys</span>
+                                    {% elif user.role == 'editor' %}
+                                    <span class="badge rounded-pill bg-success">encrypt</span>
+                                    <span class="badge rounded-pill bg-success">upload</span>
+                                    {% elif user.role == 'viewer' %}
+                                    <span class="badge rounded-pill bg-secondary">download</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="500" fill="#f8f9fa" />
+    
+    <!-- Title -->
+    <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Cloud Encryption Process Flow</text>
+    
+    <!-- Boxes -->
+    <!-- User Authentication -->
+    <rect x="50" y="100" width="150" height="70" rx="5" fill="#C6E2FF" stroke="#333" />
+    <text x="125" y="135" font-family="Arial" font-size="14" text-anchor="middle">User Authentication</text>
+    
+    <!-- RBAC -->
+    <rect x="50" y="220" width="150" height="70" rx="5" fill="#FFD700" stroke="#333" />
+    <text x="125" y="255" font-family="Arial" font-size="14" text-anchor="middle">Access Control (RBAC)</text>
+    
+    <!-- Symmetric Key -->
+    <rect x="300" y="100" width="150" height="70" rx="5" fill="#98FB98" stroke="#333" />
+    <text x="375" y="135" font-family="Arial" font-size="14" text-anchor="middle">Symmetric Key Generation</text>
+    
+    <!-- Asymmetric Key -->
+    <rect x="300" y="220" width="150" height="70" rx="5" fill="#FFA07A" stroke="#333" />
+    <text x="375" y="255" font-family="Arial" font-size="14" text-anchor="middle">Asymmetric Key Exchange</text>
+    
+    <!-- File Encryption -->
+    <rect x="550" y="100" width="150" height="70" rx="5" fill="#F08080" stroke="#333" />
+    <text x="625" y="135" font-family="Arial" font-size="14" text-anchor="middle">File Encryption</text>
+    
+    <!-- Secure Storage -->
+    <rect x="550" y="220" width="150" height="70" rx="5" fill="#9370DB" stroke="#333" />
+    <text x="625" y="255" font-family="Arial" font-size="14" text-anchor="middle">Secure Storage</text>
+    
+    <!-- Encrypted Download -->
+    <rect x="550" y="340" width="150" height="70" rx="5" fill="#87CEFA" stroke="#333" />
+    <text x="625" y="375" font-family="Arial" font-size="14" text-anchor="middle">Encrypted Download</text>
+    
+    <!-- Authorized Decryption -->
+    <rect x="300" y="340" width="150" height="70" rx="5" fill="#FFDAB9" stroke="#333" />
+    <text x="375" y="375" font-family="Arial" font-size="14" text-anchor="middle">Authorized Decryption</text>
+    
+    <!-- Decrypted File Access -->
+    <rect x="50" y="340" width="150" height="70" rx="5" fill="#7FFFD4" stroke="#333" />
+    <text x="125" y="375" font-family="Arial" font-size="14" text-anchor="middle">Decrypted File Access</text>
+    
+    <!-- Arrows -->
+    <!-- User Auth -> RBAC -->
+    <line x1="125" y1="170" x2="125" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- RBAC -> Symmetric Key -->
+    <line x1="200" y1="240" x2="300" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Symmetric Key -> Asymmetric Key -->
+    <line x1="375" y1="170" x2="375" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Asymmetric Key -> File Encryption -->
+    <line x1="450" y1="235" x2="550" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- File Encryption -> Secure Storage -->
+    <line x1="625" y1="170" x2="625" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Secure Storage -> Encrypted Download -->
+    <line x1="625" y1="290" x2="625" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Encrypted Download -> Authorized Decryption -->
+    <line x1="550" y1="375" x2="450" y2="375" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Authorized Decryption -> Decrypted File Access -->
+    <line x1="300" y1="375" x2="200" y2="375" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Arrow Definitions -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+        </marker>
+    </defs>
+    
+    <!-- Caption -->
+    <rect x="150" y="430" width="500" height="60" rx="5" fill="white" stroke="#ddd" />
+    <text x="400" y="450" font-family="Arial" font-size="12" text-anchor="middle">
+        This diagram illustrates the secure cloud storage process with encryption.
+    </text>
+    <text x="400" y="470" font-family="Arial" font-size="12" text-anchor="middle">
+        Files are encrypted before storage and only decrypted for authorized users.
+    </text>
+</svg>

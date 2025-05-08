@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Visualization - Cloud Service Encryption{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h3 class="card-title mb-0"><i class="bi bi-bar-chart"></i> Cloud Encryption Visualization</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-diagram-3"></i> Encryption Process Flow</h4>
+            </div>
+            <div class="card-body text-center">
+                <img src="{{ url_for('static', filename='images/encryption_diagram.svg') }}" alt="Encryption Process Diagram" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .encryption-animation {
+        padding: 2rem 0;
+        background-color: rgba(0,123,255,0.05);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .encryption-process {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: 1px dashed #ccc;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: rgba(255,255,255,0.7);
+    }
+    
+    .bi-arrow-right {
+        color: #6c757d;
+        animation: pulse 2s infinite;
+    }
+    
+    .bi-key, .bi-shield-lock {
+        color: #28a745;
+        animation: wiggle 3s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    
+    @keyframes wiggle {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(10deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-10deg); }
+        100% { transform: rotate(0deg); }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Encryption - Cloud Service Encryption{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title mb-0"><i class="bi bi-key"></i> Encryption & Decryption</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Key Management Section -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-success text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-key-fill"></i> Key Management</h4>
+            </div>
+            <div class="card-body">
+
+                
+                <h5 class="mt-3">Current Key Status:</h5>
+                <div id="key-status" class="p-3 border rounded">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div><strong>Symmetric Key:</strong> <span id="symmetric-key-status">Checking...</span></div>
+                        <div id="symmetric-key-preview" class="text-muted small"></div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div><strong>Asymmetric Keys:</strong> <span id="asymmetric-keys-status">Checking...</span></div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div><strong>Created:</strong> <span id="key-created">Unknown</span></div>
+                    </div>
+                </div>
+                
+                {% if can_generate_keys %}
+                <div class="d-grid gap-2 mt-3">
+                    <button id="generate-keys" class="btn btn-primary" type="button">
+                        <i class="bi bi-key"></i> Generate New Keys
+                    </button>
+                </div>
+                <div class="form-text text-muted">Warning: Generating new keys will make previously encrypted data inaccessible with the new keys.</div>
+                {% else %}
+                <div class="alert alert-warning mt-3">
+                    <i class="bi bi-exclamation-triangle"></i> Your role ({{ role }}) does not have permission to generate new keys.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Text Encryption Section -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-info text-white">
+                <h4 class="card-title mb-0"><i class="bi bi-file-earmark-lock"></i> Text Encryption</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="plaintext" class="form-label">Enter text to encrypt/decrypt:</label>
+                    <textarea id="plaintext" class="form-control" rows="4" placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <div class="d-flex gap-2 mb-3">
+                    {% if can_encrypt %}
+                    <button id="encrypt-btn" class="btn btn-success flex-grow-1" type="button">
+                        <i class="bi bi-lock"></i> Encrypt
+                    </button>
+                    {% endif %}
+                    
+                    {% if can_decrypt %}
+                    <button id="decrypt-btn" class="btn btn-warning flex-grow-1" type="button">
+                        <i class="bi bi-unlock"></i> Decrypt
+                    </button>
+                    {% endif %}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="result" class="form-label">Result:</label>
+                    <textarea id="result" class="form-control" rows="4" readonly></textarea>
+                </div>
+                
+                {% if not can_encrypt and not can_decrypt %}
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i> Your role ({{ role }}) does not have permission to encrypt or decrypt text.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $(document).ready(function() {
+        // Load key info when page loads
+        refreshKeyInfo();
+        
+        // Set up button handlers
+        $('#generate-keys').click(generateKeys);
+        $('#encrypt-btn').click(encryptText);
+        $('#decrypt-btn').click(decryptText);
+        
+        function refreshKeyInfo() {
+            $.get('/api/get_key_info', function(data) {
+                $('#symmetric-key-status').text(data.symmetric_key_exists ? 'Available' : 'Not generated');
+                $('#asymmetric-keys-status').text(data.asymmetric_keys_exist ? 'Available' : 'Not generated');
+                $('#key-created').text(data.created || 'Unknown');
+                
+                if (data.symmetric_key_preview) {
+                    $('#symmetric-key-preview').text('Preview: ' + data.symmetric_key_preview);
+                }
+                
+                // Update UI based on key availability
+                if (!data.symmetric_key_exists) {
+                    $('#encrypt-btn, #decrypt-btn').attr('disabled', 'disabled');
+                    $('#key-status').addClass('bg-light');
+                } else {
+                    $('#encrypt-btn, #decrypt-btn').removeAttr('disabled');
+                    $('#key-status').removeClass('bg-light');
+                }
+            });
+        }
+        
+        function generateKeys() {
+            $('#generate-keys').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Generating...');
+            
+            $.post('/api/generate_keys', function(data) {
+                if (data.success) {
+                    showAlert('success', 'Keys generated successfully!');
+                    refreshKeyInfo();
+                } else {
+                    showAlert('danger', 'Error: ' + data.error);
+                }
+                $('#generate-keys').prop('disabled', false).html('<i class="bi bi-key"></i> Generate New Keys');
+            }).fail(function(xhr) {
+                showAlert('danger', 'Error: ' + (xhr.responseJSON?.error || 'Failed to generate keys'));
+                $('#generate-keys').prop('disabled', false).html('<i class="bi bi-key"></i> Generate New Keys');
+            });
+        }
+        
+        function encryptText() {
+            const plaintext = $('#plaintext').val().trim();
+            if (!plaintext) {
+                showAlert('warning', 'Please enter text to encrypt');
+                return;
+            }
+            
+            $('#encrypt-btn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Encrypting...');
+            
+            $.ajax({
+                url: '/api/encrypt_text',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ plaintext: plaintext }),
+                success: function(data) {
+                    $('#result').val(data.encrypted);
+                    showAlert('success', 'Text encrypted successfully!');
+                    $('#encrypt-btn').prop('disabled', false).html('<i class="bi bi-lock"></i> Encrypt');
+                },
+                error: function(xhr) {
+                    showAlert('danger', 'Error: ' + (xhr.responseJSON?.error || 'Failed to encrypt'));
+                    $('#encrypt-btn').prop('disabled', false).html('<i class="bi bi-lock"></i> Encrypt');
+                }
+            });
+        }
+        
+        function decryptText() {
+            const encrypted = $('#plaintext').val().trim();
+            if (!encrypted) {
+                showAlert('warning', 'Please enter encrypted text to decrypt');
+                return;
+            }
+            
+            $('#decrypt-btn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Decrypting...');
+            
+            $.ajax({
+                url: '/api/decrypt_text',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ encrypted: encrypted }),
+                success: function(data) {
+                    $('#result').val(data.decrypted);
+                    showAlert('success', 'Text decrypted successfully!');
+                    $('#decrypt-btn').prop('disabled', false).html('<i class="bi bi-unlock"></i> Decrypt');
+                },
+                error: function(xhr) {
+                    showAlert('danger', 'Error: ' + (xhr.responseJSON?.error || 'Failed to decrypt'));
+                    $('#decrypt-btn').prop('disabled', false).html('<i class="bi bi-unlock"></i> Decrypt');
+                }
+            });
+        }
+        
+        function showAlert(type, message) {
+            const alert = $(`<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>`);
+            
+            // Insert at the top of the content area
+            $('.card-body').first().prepend(alert);
+            
+            // Auto-dismiss after 5 seconds
+            setTimeout(function() {
+                alert.alert('close');
+            }, 5000);
+        }
+    });
+</script>
+{% endblock %}
