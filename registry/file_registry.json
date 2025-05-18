@@ -5,7 +5,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.0589747,
-      "last_accessed": 1747566224.238835,
+      "last_accessed": 1747569396.593003,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487365.3849154,
@@ -17,7 +17,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.1789641,
-      "last_accessed": 1747566224.2535422,
+      "last_accessed": 1747569396.613249,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487359.6976728,
@@ -29,7 +29,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.1812449,
-      "last_accessed": 1747566224.305411,
+      "last_accessed": 1747569396.6318266,
       "shared_with": []
     },
     "e289c752-fe06-40a6-abb4-60d062b6d5ef": {
@@ -37,7 +37,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.2519395,
-      "last_accessed": 1747566224.3506007,
+      "last_accessed": 1747569396.654415,
       "shared_with": []
     },
     "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e": {
@@ -45,7 +45,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747487184.5823653,
-      "last_accessed": 1747566224.3612123,
+      "last_accessed": 1747569396.6866307,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487370.0533123,
@@ -57,7 +57,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747487391.5659873,
-      "last_accessed": 1747566224.397597,
+      "last_accessed": 1747569396.7517238,
       "shared_with": [
         "bob",
         "charlie"
@@ -72,7 +72,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747488018.7940187,
-      "last_accessed": 1747566182.575431,
+      "last_accessed": 1747569198.7750611,
       "shared_with": []
     },
     "bd0657b1-3b44-49be-bee4-bcff3fd7829f": {
@@ -80,7 +80,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747494100.283638,
-      "last_accessed": 1747566224.481462,
+      "last_accessed": 1747569396.762774,
       "shared_with": []
     },
     "b4612554-8a6d-40b8-a154-71f33e09a52e": {
@@ -88,7 +88,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747526388.7305481,
-      "last_accessed": 1747566224.4934888,
+      "last_accessed": 1747569396.9834137,
       "shared_with": [
         "bob",
         "charlie"
@@ -103,7 +103,123 @@
       "owner": "system",
       "type": "standard",
       "created": 1747563092.453228,
-      "last_accessed": 1747566182.586895,
+      "last_accessed": 1747569198.7876217,
+      "shared_with": []
+    },
+    "3adef7ee-df92-42c3-a6ce-5ec4e59db55b": {
+      "filename": "encrypted_text_1747568015.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747568031.4568434,
+      "last_accessed": 1747569397.526066,
+      "shared_with": []
+    },
+    "fa7e45df-57e9-4b8e-828c-be41ed301d35": {
+      "filename": "encrypted_text_1747568025.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747568031.4628263,
+      "last_accessed": 1747569397.6117723,
+      "shared_with": [],
+      "metadata": {
+        "last_downloaded": 1747568038.9560833,
+        "downloaded_by": "alice"
+      }
+    },
+    "bab42b58-aeed-4ef8-ac9f-ac697e6d788e": {
+      "filename": "signup.html.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747568051.3087034,
+      "last_accessed": 1747569397.760828,
+      "shared_with": []
+    },
+    "a248d46b-695e-4e97-81eb-b6263e3d06dd": {
+      "filename": "signup.html.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747568266.479417,
+      "last_accessed": 1747569198.8004136,
+      "shared_with": []
+    },
+    "9110cea7-1b22-48be-838f-b1c442465692": {
+      "filename": "cloud.html.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747568830.9167988,
+      "last_accessed": 1747569397.8368454,
+      "shared_with": []
+    },
+    "06ac6c04-1511-4f4e-b9bb-e8358c85f6ab": {
+      "filename": "encryption.html.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747568845.057752,
+      "last_accessed": 1747569398.0375943,
+      "shared_with": []
+    },
+    "b2d4d564-7948-4fe1-a465-24cd432c97c1": {
+      "filename": "cloud.html.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747569033.4030678,
+      "last_accessed": 1747569198.803811,
+      "shared_with": []
+    },
+    "2f85d13e-c1d6-4cf9-8ff2-0427c51846c1": {
+      "filename": "encryption.html.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747569033.4276865,
+      "last_accessed": 1747569198.8070667,
+      "shared_with": []
+    },
+    "473f4555-9eb4-4b77-addf-1384f40045c8": {
+      "filename": "encrypted_text_1747568879.txt",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747569033.4339337,
+      "last_accessed": 1747569398.0510228,
+      "shared_with": []
+    },
+    "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c": {
+      "filename": "encrypted_text_1747568885.txt",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747569033.4389062,
+      "last_accessed": 1747569398.0556602,
+      "shared_with": []
+    },
+    "ca976657-e2c7-4cb0-b695-8c61048dd691": {
+      "filename": "encrypted_text_1747569227.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747569261.4000583,
+      "last_accessed": 1747569398.0798292,
+      "shared_with": []
+    },
+    "f1bd12d2-ca05-434f-9203-9819db12f9a2": {
+      "filename": "encrypted_text_1747569246.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747569261.410384,
+      "last_accessed": 1747569398.1457248,
+      "shared_with": []
+    },
+    "9653c8d4-ad46-4984-b0e2-2eb564c7fd87": {
+      "filename": "encrypted_text_1747569351.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747569391.4055853,
+      "last_accessed": 1747569398.1643908,
+      "shared_with": []
+    },
+    "a0c8c15f-4239-4866-bebb-3338263b98c5": {
+      "filename": "base.html.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747569396.418346,
+      "last_accessed": 1747569398.2029953,
       "shared_with": []
     }
   },
@@ -116,26 +232,40 @@
         "e289c752-fe06-40a6-abb4-60d062b6d5ef",
         "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
         "c26c4723-05df-46f3-9858-fc4a89eac5e1",
-        "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+        "0f917d8c-ec3b-444a-98d0-c664212e21fb",
+        "a248d46b-695e-4e97-81eb-b6263e3d06dd",
+        "b2d4d564-7948-4fe1-a465-24cd432c97c1",
+        "2f85d13e-c1d6-4cf9-8ff2-0427c51846c1",
+        "473f4555-9eb4-4b77-addf-1384f40045c8",
+        "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c"
       ],
       "first_seen": 1747486732.0589747,
-      "last_activity": 1747566182.586895
+      "last_activity": 1747569198.8135567
     },
     "alice": {
       "files": [
         "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
         "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
-        "b4612554-8a6d-40b8-a154-71f33e09a52e"
+        "b4612554-8a6d-40b8-a154-71f33e09a52e",
+        "3adef7ee-df92-42c3-a6ce-5ec4e59db55b",
+        "fa7e45df-57e9-4b8e-828c-be41ed301d35",
+        "bab42b58-aeed-4ef8-ac9f-ac697e6d788e",
+        "9110cea7-1b22-48be-838f-b1c442465692",
+        "06ac6c04-1511-4f4e-b9bb-e8358c85f6ab",
+        "ca976657-e2c7-4cb0-b695-8c61048dd691",
+        "f1bd12d2-ca05-434f-9203-9819db12f9a2",
+        "9653c8d4-ad46-4984-b0e2-2eb564c7fd87",
+        "a0c8c15f-4239-4866-bebb-3338263b98c5"
       ],
       "first_seen": 1747487391.5659873,
-      "last_activity": 1747563454.991431
+      "last_activity": 1747569398.2275078
     }
   },
   "metadata": {
     "created": 1747486731.9927974,
-    "last_updated": 1747566224.4947011,
+    "last_updated": 1747569398.2282288,
     "version": "1.0",
-    "file_count": 10,
+    "file_count": 24,
     "owner_count": 2
   }
 }

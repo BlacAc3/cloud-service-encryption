@@ -1,0 +1,30 @@
+{
+  "file_id": "9653c8d4-ad46-4984-b0e2-2eb564c7fd87",
+  "filename": "encrypted_text_1747569351.txt",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747569391.4055853,
+  "last_accessed": 1747569398.1643908,
+  "last_modified": 1747569391.4055853,
+  "shared_with": [],
+  "metadata": {
+    "size": 100,
+    "date": "Sun May 18 12:55:51 2025",
+    "last_accessed": 1747569391.4030683,
+    "modified": 1747569351.6744955,
+    "created": 1747569351.6744955
+  },
+  "file_hash": "44736fb82c8d27c5fe69cc02653d81d25d91151497594dcdb619b86a0eb4578d",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747569391.4055853,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569398.1643908,
+      "user": "system"
+    }
+  ]
+}

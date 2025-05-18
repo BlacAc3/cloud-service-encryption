@@ -1,0 +1,45 @@
+{
+  "file_id": "f1bd12d2-ca05-434f-9203-9819db12f9a2",
+  "filename": "encrypted_text_1747569246.txt",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747569261.410384,
+  "last_accessed": 1747569398.1457248,
+  "last_modified": 1747569261.410384,
+  "shared_with": [],
+  "metadata": {
+    "size": 100,
+    "date": "Sun May 18 12:54:06 2025",
+    "last_accessed": 1747569261.4100204,
+    "modified": 1747569246.0478292,
+    "created": 1747569246.0478292
+  },
+  "file_hash": "46d0db9dce29b55b8b0fc21e670120fc7363ae2ddecbb5e713cdcfae38948afc",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747569261.410384,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569265.2770362,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569389.478515,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569391.3916032,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569398.1457248,
+      "user": "system"
+    }
+  ]
+}

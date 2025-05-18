@@ -1,0 +1,81 @@
+{
+  "file_id": "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c",
+  "filename": "encrypted_text_1747568885.txt",
+  "owner": "system",
+  "type": "standard",
+  "created": 1747569033.4389062,
+  "last_accessed": 1747569398.0556602,
+  "last_modified": 1747569033.4389062,
+  "shared_with": [],
+  "metadata": {
+    "size": 120,
+    "created": 1747568885.4139838,
+    "modified": 1747568885.4139838,
+    "scan_date": 1747569198.8132577,
+    "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
+    "file_hash": "e094f51eae282015880f1236e3f866e8acef3833488066830e90056d3db0c051"
+  },
+  "file_hash": "e094f51eae282015880f1236e3f866e8acef3833488066830e90056d3db0c051",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747569033.4389062,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569050.6902933,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569051.7598338,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569198.8135567,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569214.9744818,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569216.3925424,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569257.5656176,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569261.3765104,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569265.2481034,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569389.2497756,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569391.3653119,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569398.0556602,
+      "user": "system"
+    }
+  ]
+}

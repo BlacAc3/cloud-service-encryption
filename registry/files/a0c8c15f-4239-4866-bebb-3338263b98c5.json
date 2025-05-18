@@ -1,0 +1,30 @@
+{
+  "file_id": "a0c8c15f-4239-4866-bebb-3338263b98c5",
+  "filename": "base.html.encrypted",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747569396.418346,
+  "last_accessed": 1747569398.2029953,
+  "last_modified": 1747569396.418346,
+  "shared_with": [],
+  "metadata": {
+    "size": 8484,
+    "original_name": "base.html",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747569396.412873
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747569396.418346,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569398.2029953,
+      "user": "system"
+    }
+  ]
+}

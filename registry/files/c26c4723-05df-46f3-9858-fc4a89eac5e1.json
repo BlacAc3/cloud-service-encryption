@@ -4,14 +4,14 @@
   "owner": "system",
   "type": "standard",
   "created": 1747488018.7940187,
-  "last_accessed": 1747566182.575431,
+  "last_accessed": 1747569198.7750611,
   "last_modified": 1747488018.7940187,
   "shared_with": [],
   "metadata": {
     "size": 89996,
     "created": 1747487391.5644593,
     "modified": 1747487391.5644593,
-    "scan_date": 1747566182.5750594,
+    "scan_date": 1747569198.7746959,
     "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
     "file_hash": "dae0275f6eaeff2eaee75343e9ff494d2ca9b39143099a40cad4fc609a22c213"
   },
@@ -285,6 +285,116 @@
     {
       "action": "accessed",
       "timestamp": 1747566182.575431,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566925.7957284,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566928.2463706,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567016.9149337,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567188.8489575,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567369.5430245,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567418.8848717,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567453.4386568,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567867.3580549,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567869.465622,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567933.7179098,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568266.3260398,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568268.500407,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568352.767374,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568372.7997482,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568501.4994032,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568572.3957355,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568601.0767555,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568766.9761126,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568770.8234415,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568800.9817634,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569033.2164018,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569198.7750611,
       "user": "system"
     }
   ]

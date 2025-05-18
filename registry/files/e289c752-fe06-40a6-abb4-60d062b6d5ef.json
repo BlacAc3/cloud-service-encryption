@@ -4,14 +4,14 @@
   "owner": "system",
   "type": "standard",
   "created": 1747486732.2519395,
-  "last_accessed": 1747566224.3506007,
+  "last_accessed": 1747569396.654415,
   "last_modified": 1747486732.2519395,
   "shared_with": [],
   "metadata": {
     "size": 1397924,
     "created": 1747434455.4637527,
     "modified": 1747434455.4637527,
-    "scan_date": 1747566182.5601535,
+    "scan_date": 1747569198.7582672,
     "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
     "file_hash": "f6455968c451ab1fe77b7c5f3bcaf732f5aac64cbcacac5eb236f473f7d09a28"
   },
@@ -1115,6 +1115,261 @@
     {
       "action": "name_lookup",
       "timestamp": 1747566224.3506007,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566925.7514787,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566928.2156243,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567016.8573136,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567188.8129814,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567369.520824,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567417.140457,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567453.2979126,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567867.293336,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567869.4453688,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747567933.700059,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568029.5504522,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568031.3747041,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568051.3892598,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568160.4803936,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568161.5092263,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568266.2425835,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568268.4759061,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568352.7452378,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568372.721605,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568403.5066414,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568404.649045,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568439.1808267,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568442.614016,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568501.4796257,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568515.9054024,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568517.140135,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568572.3774428,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568601.0532706,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568653.666397,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568654.7641416,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568745.5315104,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568746.6257215,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568766.9577255,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568770.8017035,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568800.9616816,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568823.5063176,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568824.9426262,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568831.0959036,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568845.7467122,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569033.001549,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569050.5156453,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569051.4966784,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569198.7586637,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569214.8052201,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569216.0225248,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569257.488415,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569259.0848897,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569265.0647383,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569388.1426315,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569390.9681468,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569396.654415,
       "user": "system"
     }
   ]

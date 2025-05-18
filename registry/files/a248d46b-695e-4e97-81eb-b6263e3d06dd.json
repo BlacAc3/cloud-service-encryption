@@ -1,0 +1,81 @@
+{
+  "file_id": "a248d46b-695e-4e97-81eb-b6263e3d06dd",
+  "filename": "signup.html.encrypted",
+  "owner": "system",
+  "type": "standard",
+  "created": 1747568266.479417,
+  "last_accessed": 1747569198.8004136,
+  "last_modified": 1747568266.479417,
+  "shared_with": [],
+  "metadata": {
+    "size": 2744,
+    "created": 1747568051.3077588,
+    "modified": 1747568051.3077588,
+    "scan_date": 1747569198.8001041,
+    "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
+    "file_hash": "569e9ad3d6fc71732d0f46efa0e7c8407f9b9897e76deec785507dcd92e018a6"
+  },
+  "file_hash": "569e9ad3d6fc71732d0f46efa0e7c8407f9b9897e76deec785507dcd92e018a6",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747568266.479417,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568268.5617216,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568352.8349152,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568372.931969,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568501.5610707,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568572.775144,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568601.153899,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568767.008194,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568770.8543725,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747568801.0100203,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569033.354858,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569198.8004136,
+      "user": "system"
+    }
+  ]
+}

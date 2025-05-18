@@ -1,0 +1,160 @@
+{
+  "file_id": "bab42b58-aeed-4ef8-ac9f-ac697e6d788e",
+  "filename": "signup.html.encrypted",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747568051.3087034,
+  "last_accessed": 1747569397.760828,
+  "last_modified": 1747568051.3087034,
+  "shared_with": [],
+  "metadata": {
+    "size": 2744,
+    "original_name": "signup.html",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747568051.3078358
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747568051.3087034,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568051.4567697,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568160.520258,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568161.8894486,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568403.6918688,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568405.023058,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568439.368217,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568442.9371207,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568516.1374896,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568518.4003139,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568653.7343268,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568654.890058,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568745.5913801,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568747.0325341,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568824.1868157,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568825.0658514,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568831.3090162,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568846.1204472,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569050.6559155,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569051.6429906,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569214.936251,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569216.3392165,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569257.5503423,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569260.7698374,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569265.2237625,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569388.9957328,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569391.2905488,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569397.760828,
+      "user": "system"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "file_id": "b2d4d564-7948-4fe1-a465-24cd432c97c1",
+  "filename": "cloud.html.encrypted",
+  "owner": "system",
+  "type": "standard",
+  "created": 1747569033.4030678,
+  "last_accessed": 1747569198.803811,
+  "last_modified": 1747569033.4030678,
+  "shared_with": [],
+  "metadata": {
+    "size": 24888,
+    "created": 1747568830.915719,
+    "modified": 1747568830.915719,
+    "scan_date": 1747569198.803448,
+    "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
+    "file_hash": "e8f07389568f11d0779852977a5848ef17d0687d57d0b8757e3d076b65deeaad"
+  },
+  "file_hash": "e8f07389568f11d0779852977a5848ef17d0687d57d0b8757e3d076b65deeaad",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747569033.4030678,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747569198.803811,
+      "user": "system"
+    }
+  ]
+}

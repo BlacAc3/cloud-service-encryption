@@ -15,6 +15,7 @@ from werkzeug.utils import secure_filename
 from io import BytesIO
 from services.registry import FileRegistry
 
+
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)  # For session management
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
@@ -26,6 +27,37 @@ app.config['REGISTRY_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__f
 for directory in [app.config['UPLOAD_FOLDER'], app.config['KEYS_FOLDER'], app.config['CLOUD_STORAGE'], app.config['REGISTRY_FOLDER']]:
     if not os.path.exists(directory):
         os.makedirs(directory)
+
+
+#Save metrics
+def save_encryption_metrics(metrics):
+    metrics_file = os.path.join(app.config['KEYS_FOLDER'], 'encryption_metrics.json')
+    with open(metrics_file, 'w') as f:
+        json.dump(metrics, f)
+
+
+#Load metrics
+def load_encryption_metrics():
+    metrics_file = os.path.join(app.config['KEYS_FOLDER'], 'encryption_metrics.json')
+    if os.path.exists(metrics_file):
+        with open(metrics_file, 'r') as f:
+            import json
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                print("Error decoding encryption metrics file.  Returning a blank slate.")
+                return {
+                    'symmetric_encrypt': [],
+                    'rsa_encrypt': []
+                }
+    else:
+        json =  {
+            'symmetric_encrypt': [],
+            'rsa_encrypt': []
+        }
+        save_encryption_metrics(json)
+        return json
+
 
 # Initialize the file registry
 file_registry = FileRegistry(base_dir=os.path.dirname(os.path.abspath(__file__)))
@@ -46,9 +78,17 @@ def get_symmetric_key():
     return generate_symmetric_key()
 
 def symmetric_encrypt(key, data):
+    encryption_metrics=load_encryption_metrics()
+    start = time.time()
     f = Fernet(key)
     if isinstance(data, str):
+
+        encryption_metrics['symmetric_encrypt'].append(time.time() - start)
         return f.encrypt(data.encode())
+
+    encryption_metrics['symmetric_encrypt'].append(time.time() - start)
+    save_encryption_metrics(encryption_metrics)
+
     return f.encrypt(data)
 
 def symmetric_decrypt(key, ciphertext):
@@ -113,12 +153,17 @@ def get_asymmetric_keys():
     return generate_asymmetric_keys()
 
 def rsa_encrypt(public_key, data):
+    encryption_metrics = load_encryption_metrics()
+    start = time.time()
     if isinstance(data, str):
         data = data.encode()
-    return public_key.encrypt(
+    encrypted_data = public_key.encrypt(
         data,
         padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None)
     )
+    encryption_metrics['rsa_encrypt'].append(time.time() - start)
+    save_encryption_metrics(encryption_metrics)
+    return encrypted_data
 
 def rsa_decrypt(private_key, ciphertext):
     return private_key.decrypt(
@@ -346,6 +391,15 @@ def cloud():
         session=session,
     )
 
+@app.route('/api/metrics', methods=['GET'])
+def api_metrics():
+    if 'user' not in session:
+        return jsonify({"error": "Not authenticated"}), 401
+    # Only viewers or higher
+    if not rbac.is_authorized(session['user'], 'view_files'):
+        return jsonify({"error": "Not authorized"}), 403
+    return jsonify(load_encryption_metrics())
+
 @app.route('/visualization')
 def visualization():
     if 'user' not in session:
@@ -507,6 +561,7 @@ def api_upload_file():
             "owner": session['user']
         })
     except Exception as e:
+        print(e)
         return jsonify({"error": str(e)}), 500
 
 @app.route('/api/download_file/<filename>', methods=['GET'])

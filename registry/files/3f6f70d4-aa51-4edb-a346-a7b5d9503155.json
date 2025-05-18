@@ -4,7 +4,7 @@
   "owner": "alice",
   "type": "standard",
   "created": 1747487391.5659873,
-  "last_accessed": 1747566224.397597,
+  "last_accessed": 1747569396.7517238,
   "last_modified": 1747487391.5659873,
   "shared_with": [
     "bob",
@@ -849,6 +849,155 @@
     {
       "action": "name_lookup",
       "timestamp": 1747566224.397597,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568030.0774562,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568031.4208937,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568051.418861,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568160.4976745,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568161.6597955,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568403.6207135,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568404.8106668,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568439.2844696,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568442.7254405,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568516.0464401,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568517.1869984,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568653.6866422,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568654.8085325,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568745.5570557,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568746.7855592,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568823.6649842,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568825.0049868,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568831.1942055,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747568845.9554842,
+      "user": "system"
+    },
+    {
+      "action": "retrieved",
+      "timestamp": 1747568859.6801076
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569050.590306,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569051.5372844,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569214.8561945,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569216.0728176,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569257.5203588,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569260.3802612,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569265.122207,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569388.531296,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569391.1311336,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747569396.7517238,
       "user": "system"
     }
   ],

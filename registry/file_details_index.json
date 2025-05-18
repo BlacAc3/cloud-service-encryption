@@ -25,6 +25,42 @@
     "jacc_json.txt.encrypted": [
       "b4612554-8a6d-40b8-a154-71f33e09a52e",
       "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+    ],
+    "encrypted_text_1747568015.txt": [
+      "3adef7ee-df92-42c3-a6ce-5ec4e59db55b"
+    ],
+    "encrypted_text_1747568025.txt": [
+      "fa7e45df-57e9-4b8e-828c-be41ed301d35"
+    ],
+    "signup.html.encrypted": [
+      "bab42b58-aeed-4ef8-ac9f-ac697e6d788e",
+      "a248d46b-695e-4e97-81eb-b6263e3d06dd"
+    ],
+    "cloud.html.encrypted": [
+      "9110cea7-1b22-48be-838f-b1c442465692",
+      "b2d4d564-7948-4fe1-a465-24cd432c97c1"
+    ],
+    "encryption.html.encrypted": [
+      "06ac6c04-1511-4f4e-b9bb-e8358c85f6ab",
+      "2f85d13e-c1d6-4cf9-8ff2-0427c51846c1"
+    ],
+    "encrypted_text_1747568879.txt": [
+      "473f4555-9eb4-4b77-addf-1384f40045c8"
+    ],
+    "encrypted_text_1747568885.txt": [
+      "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c"
+    ],
+    "encrypted_text_1747569227.txt": [
+      "ca976657-e2c7-4cb0-b695-8c61048dd691"
+    ],
+    "encrypted_text_1747569246.txt": [
+      "f1bd12d2-ca05-434f-9203-9819db12f9a2"
+    ],
+    "encrypted_text_1747569351.txt": [
+      "9653c8d4-ad46-4984-b0e2-2eb564c7fd87"
+    ],
+    "base.html.encrypted": [
+      "a0c8c15f-4239-4866-bebb-3338263b98c5"
     ]
   },
   "files_by_hash": {
@@ -35,7 +71,17 @@
     "2a6f27a3055bb6ec2302fa51c923dff72bf9f5e917ca1a67ac8be9badae6fc61": "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
     "dae0275f6eaeff2eaee75343e9ff494d2ca9b39143099a40cad4fc609a22c213": "c26c4723-05df-46f3-9858-fc4a89eac5e1",
     "63c1027cb5cc6749c5e27c548f1476a2c0b73ce9f5914273c79a365d52561846": "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
-    "6c3e5fb9154878557e47895e561dee2ab6f17edf6b39544fb2b882339738f9b5": "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+    "6c3e5fb9154878557e47895e561dee2ab6f17edf6b39544fb2b882339738f9b5": "0f917d8c-ec3b-444a-98d0-c664212e21fb",
+    "51401744b58f8554ecb2c4017d1a9d98b2f652a17276aa13e06e4a90fcafabd0": "3adef7ee-df92-42c3-a6ce-5ec4e59db55b",
+    "fe3bfb108f4af4b4ef7083536334f259751b0b5ed3d12dc70620a45071cd2c89": "fa7e45df-57e9-4b8e-828c-be41ed301d35",
+    "569e9ad3d6fc71732d0f46efa0e7c8407f9b9897e76deec785507dcd92e018a6": "a248d46b-695e-4e97-81eb-b6263e3d06dd",
+    "e8f07389568f11d0779852977a5848ef17d0687d57d0b8757e3d076b65deeaad": "b2d4d564-7948-4fe1-a465-24cd432c97c1",
+    "0055dc11d4c022b4f5575d397f269dda15aa53d364806f1c6122d1c50f736626": "2f85d13e-c1d6-4cf9-8ff2-0427c51846c1",
+    "1e00bb6eabfff0fcf64090749b9f85520517b68042207a3273942fdbf93d81e0": "473f4555-9eb4-4b77-addf-1384f40045c8",
+    "e094f51eae282015880f1236e3f866e8acef3833488066830e90056d3db0c051": "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c",
+    "a4bd61241d77163244da740d798d2ed48cacb211275efb98f0d56f41c165fd1a": "ca976657-e2c7-4cb0-b695-8c61048dd691",
+    "46d0db9dce29b55b8b0fc21e670120fc7363ae2ddecbb5e713cdcfae38948afc": "f1bd12d2-ca05-434f-9203-9819db12f9a2",
+    "44736fb82c8d27c5fe69cc02653d81d25d91151497594dcdb619b86a0eb4578d": "9653c8d4-ad46-4984-b0e2-2eb564c7fd87"
   },
   "files_by_owner": {
     "system": [
@@ -45,12 +91,26 @@
       "e289c752-fe06-40a6-abb4-60d062b6d5ef",
       "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
       "c26c4723-05df-46f3-9858-fc4a89eac5e1",
-      "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+      "0f917d8c-ec3b-444a-98d0-c664212e21fb",
+      "a248d46b-695e-4e97-81eb-b6263e3d06dd",
+      "b2d4d564-7948-4fe1-a465-24cd432c97c1",
+      "2f85d13e-c1d6-4cf9-8ff2-0427c51846c1",
+      "473f4555-9eb4-4b77-addf-1384f40045c8",
+      "83bdaf6e-8ca4-4bd3-919b-cf3ee86bab1c"
     ],
     "alice": [
       "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
       "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
-      "b4612554-8a6d-40b8-a154-71f33e09a52e"
+      "b4612554-8a6d-40b8-a154-71f33e09a52e",
+      "3adef7ee-df92-42c3-a6ce-5ec4e59db55b",
+      "fa7e45df-57e9-4b8e-828c-be41ed301d35",
+      "bab42b58-aeed-4ef8-ac9f-ac697e6d788e",
+      "9110cea7-1b22-48be-838f-b1c442465692",
+      "06ac6c04-1511-4f4e-b9bb-e8358c85f6ab",
+      "ca976657-e2c7-4cb0-b695-8c61048dd691",
+      "f1bd12d2-ca05-434f-9203-9819db12f9a2",
+      "9653c8d4-ad46-4984-b0e2-2eb564c7fd87",
+      "a0c8c15f-4239-4866-bebb-3338263b98c5"
     ]
   },
   "shared_files": {
@@ -65,7 +125,7 @@
   },
   "metadata": {
     "created": 1747486731.9933836,
-    "last_updated": 1747563092.464375,
+    "last_updated": 1747569396.4309943,
     "version": "1.0"
   }
 }
