@@ -1,0 +1,63 @@
+{
+  "file_id": "db374ace-88a8-4b42-a173-ca8cae11292a",
+  "filename": "brave_screenshot_localhost_1.png.encrypted",
+  "owner": "ace1",
+  "type": "standard",
+  "created": 1747597966.9420123,
+  "last_accessed": 1747598392.818538,
+  "last_modified": 1747597966.9420123,
+  "shared_with": [
+    "alice",
+    "bob"
+  ],
+  "metadata": {
+    "size": 89996,
+    "original_name": "brave_screenshot_localhost (1).png",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747597966.9413478
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747597966.9420123,
+      "user": "ace1"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597966.9780471,
+      "user": "system"
+    },
+    {
+      "action": "retrieved",
+      "timestamp": 1747598363.268715
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747598363.2742264,
+      "user": "alice",
+      "shared_by": "ace1"
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747598363.2806034,
+      "user": "bob",
+      "shared_by": "ace1"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.3963346,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.818538,
+      "user": "system"
+    }
+  ],
+  "share_timestamps": {
+    "alice": 1747598363.2742264,
+    "bob": 1747598363.2806034
+  }
+}

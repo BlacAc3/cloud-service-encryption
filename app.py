@@ -92,11 +92,17 @@ def symmetric_encrypt(key, data):
     return f.encrypt(data)
 
 def symmetric_decrypt(key, ciphertext):
+    encryption_metrics=load_encryption_metrics()
+    start = time.time()
     f = Fernet(key)
     decrypted = f.decrypt(ciphertext)
     try:
+        encryption_metrics['symmetric_decrypt'].append(time.time() - start)
+        save_encryption_metrics(encryption_metrics)
         return decrypted.decode()
     except UnicodeDecodeError:
+        encryption_metrics['symmetric_decrypt'].append(time.time() - start)
+        save_encryption_metrics(encryption_metrics)
         return decrypted  # Return as bytes if it's not text
 
 # ---------- Asymmetric Encryption for Key Exchange ----------

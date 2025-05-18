@@ -1,0 +1,25 @@
+{
+  "file_id": "4d37ef23-fb0f-4deb-89f8-1e1fa630a74b",
+  "filename": "PROJECT_WORK.docx.encrypted",
+  "owner": "ace1",
+  "type": "standard",
+  "created": 1747597950.0032287,
+  "last_accessed": 1747597950.0032287,
+  "last_modified": 1747597950.0032287,
+  "shared_with": [],
+  "metadata": {
+    "size": 2545996,
+    "original_name": "PROJECT_WORK.docx",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747597950.0024807
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747597950.0032287,
+      "user": "ace1"
+    }
+  ]
+}

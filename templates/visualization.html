@@ -7,6 +7,12 @@ Encryption{% endblock %} {% block content %}
             <canvas id="symLatencyChart"></canvas>
         </div>
     </div>
+    <div class="card">
+        <div class="card-header">Decryption Latency Metrics</div>
+        <div class="card-body">
+            <canvas id="decryptLatencyChart"></canvas>
+        </div>
+    </div>
 </div>
 {% endblock %} {% block extra_js %}
 <!-- Inlined Scripts -->
@@ -22,7 +28,7 @@ Encryption{% endblock %} {% block content %}
             .then((res) => res.json())
             .then((data) => {
                 const symData = data.symmetric_encrypt;
-                const rsaData = data.rsa_encrypt;
+                const decryptData = data.symmetric_decrypt;
 
                 const labels = symData.map((_, i) => "Run " + (i + 1));
 
@@ -37,6 +43,35 @@ Encryption{% endblock %} {% block content %}
                                 {
                                     label: "Symmetric Encrypt (s)",
                                     data: symData,
+                                    fill: false,
+                                    tension: 0.1,
+                                },
+                            ],
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        },
+                    },
+                );
+
+                // Symmetric Decrypt chart
+                new Chart(
+                    document
+                        .getElementById("decryptLatencyChart")
+                        .getContext("2d"),
+                    {
+                        type: "line",
+                        data: {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: "Symmetric Decrypt (s)",
+                                    data: decryptData,
                                     fill: false,
                                     tension: 0.1,
                                 },

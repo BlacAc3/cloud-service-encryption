@@ -1,159 +1,144 @@
 {
-  "file_id": "bab42b58-aeed-4ef8-ac9f-ac697e6d788e",
-  "filename": "signup.html.encrypted",
-  "owner": "alice",
+  "file_id": "5d099802-d6cd-4ddc-8a65-c7e2c87dcad7",
+  "filename": "photo_2025-03-04_12-24-12.jpg.encrypted",
+  "owner": "bob",
   "type": "standard",
-  "created": 1747568051.3087034,
-  "last_accessed": 1747569397.760828,
-  "last_modified": 1747568051.3087034,
+  "created": 1747588562.5636551,
+  "last_accessed": 1747598392.7984107,
+  "last_modified": 1747588562.5636551,
   "shared_with": [],
   "metadata": {
-    "size": 2744,
-    "original_name": "signup.html",
-    "encrypted": true,
-    "encryption_type": "symmetric",
-    "upload_date": 1747568051.3078358
+    "size": 84792,
+    "date": "Sun May 18 18:14:17 2025",
+    "last_accessed": 1747588562.5465379,
+    "modified": 1747588457.979904,
+    "created": 1747588457.979904
   },
-  "file_hash": null,
+  "file_hash": "2c7a59ed7fd185750d40ec4d553dc189392c6e5af017624e3f53d0ec17dd2e9e",
   "access_history": [
     {
       "action": "created",
-      "timestamp": 1747568051.3087034,
-      "user": "alice"
+      "timestamp": 1747588562.5636551,
+      "user": "bob"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568051.4567697,
+      "timestamp": 1747588565.0463781,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568160.520258,
+      "timestamp": 1747592280.7037728,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568161.8894486,
+      "timestamp": 1747592281.5162897,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568403.6918688,
+      "timestamp": 1747592291.445249,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568405.023058,
+      "timestamp": 1747592347.6893334,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568439.368217,
+      "timestamp": 1747592350.3386352,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568442.9371207,
+      "timestamp": 1747592351.1334496,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568516.1374896,
+      "timestamp": 1747592354.844515,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568518.4003139,
+      "timestamp": 1747592355.2816117,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568653.7343268,
+      "timestamp": 1747592367.301144,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568654.890058,
+      "timestamp": 1747592368.0970395,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568745.5913801,
+      "timestamp": 1747592391.1345186,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568747.0325341,
+      "timestamp": 1747592391.8930562,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568824.1868157,
+      "timestamp": 1747592415.1325939,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568825.0658514,
+      "timestamp": 1747592556.387103,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568831.3090162,
+      "timestamp": 1747592557.4706657,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747568846.1204472,
+      "timestamp": 1747592868.0949347,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569050.6559155,
+      "timestamp": 1747592868.832937,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569051.6429906,
+      "timestamp": 1747597941.244318,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569214.936251,
+      "timestamp": 1747597941.4956863,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569216.3392165,
+      "timestamp": 1747597950.030879,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569257.5503423,
+      "timestamp": 1747597966.9666345,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569260.7698374,
+      "timestamp": 1747598392.3883538,
       "user": "system"
     },
     {
       "action": "name_lookup",
-      "timestamp": 1747569265.2237625,
-      "user": "system"
-    },
-    {
-      "action": "name_lookup",
-      "timestamp": 1747569388.9957328,
-      "user": "system"
-    },
-    {
-      "action": "name_lookup",
-      "timestamp": 1747569391.2905488,
-      "user": "system"
-    },
-    {
-      "action": "name_lookup",
-      "timestamp": 1747569397.760828,
+      "timestamp": 1747598392.7984107,
       "user": "system"
     }
   ]

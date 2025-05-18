@@ -1,0 +1,70 @@
+{
+  "file_id": "30e57f00-72d9-4f1d-bda8-6c2146cf1709",
+  "filename": "encrypted_text_1747592540.txt",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747592557.4799871,
+  "last_accessed": 1747598392.8127015,
+  "last_modified": 1747592557.4799871,
+  "shared_with": [],
+  "metadata": {
+    "size": 100,
+    "date": "Sun May 18 19:22:20 2025",
+    "last_accessed": 1747592557.4795399,
+    "modified": 1747592540.8321757,
+    "created": 1747592540.8321757
+  },
+  "file_hash": "a41bb441fbcb24abf749a905e5437d06a86c28b4684ccb0573694a3b060d3fa2",
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747592557.4799871,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592561.8700683,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592868.1013858,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592868.8735478,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597941.2516434,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597941.522275,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597950.0416117,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597966.973188,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.3939292,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.8127015,
+      "user": "system"
+    }
+  ]
+}

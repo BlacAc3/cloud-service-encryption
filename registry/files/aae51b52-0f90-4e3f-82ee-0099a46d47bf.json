@@ -1,0 +1,116 @@
+{
+  "file_id": "aae51b52-0f90-4e3f-82ee-0099a46d47bf",
+  "filename": "PROJECT_WORK.docx.encrypted",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747592415.0493598,
+  "last_accessed": 1747598392.807806,
+  "last_modified": 1747592415.0493598,
+  "shared_with": [
+    "bob",
+    "charlie",
+    "ace1"
+  ],
+  "metadata": {
+    "size": 2545996,
+    "original_name": "PROJECT WORK!!.docx",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747592415.042556
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747592415.0493598,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592415.1602476,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592440.875856,
+      "user": "system"
+    },
+    {
+      "action": "retrieved",
+      "timestamp": 1747592493.2888393
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747592493.2945712,
+      "user": "bob",
+      "shared_by": "alice"
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747592493.3033376,
+      "user": "charlie",
+      "shared_by": "alice"
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747592493.3110204,
+      "user": "ace1",
+      "shared_by": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592556.396531,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592557.4769769,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592868.098773,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747592868.853404,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597941.2484422,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597941.5141273,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597950.0377843,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747597966.9698887,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.3915076,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747598392.807806,
+      "user": "system"
+    }
+  ],
+  "share_timestamps": {
+    "bob": 1747592493.2945712,
+    "charlie": 1747592493.3033376,
+    "ace1": 1747592493.3110204
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "file_id": "806cc1b2-c911-4ec6-9c60-739bddb7e009",
+  "filename": "photo_2025-03-04_12-24-12.jpg.encrypted",
+  "owner": "ace1",
+  "type": "standard",
+  "created": 1747592291.346838,
+  "last_accessed": 1747592291.346838,
+  "last_modified": 1747592291.346838,
+  "shared_with": [],
+  "metadata": {
+    "size": 84792,
+    "original_name": "photo_2025-03-04_12-24-12.jpg",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747592291.3364177
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747592291.346838,
+      "user": "ace1"
+    }
+  ]
+}
