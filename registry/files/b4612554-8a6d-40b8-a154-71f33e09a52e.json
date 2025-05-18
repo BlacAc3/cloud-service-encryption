@@ -1,0 +1,83 @@
+{
+  "file_id": "b4612554-8a6d-40b8-a154-71f33e09a52e",
+  "filename": "jacc_json.txt.encrypted",
+  "owner": "alice",
+  "type": "standard",
+  "created": 1747526388.7305481,
+  "last_accessed": 1747563454.972258,
+  "last_modified": 1747526388.7305481,
+  "shared_with": [
+    "bob",
+    "charlie"
+  ],
+  "metadata": {
+    "size": 100,
+    "original_name": "jacc_json.txt",
+    "encrypted": true,
+    "encryption_type": "symmetric",
+    "upload_date": 1747526388.729403
+  },
+  "file_hash": null,
+  "access_history": [
+    {
+      "action": "created",
+      "timestamp": 1747526388.7305481,
+      "user": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747526388.9102967,
+      "user": "system"
+    },
+    {
+      "action": "retrieved",
+      "timestamp": 1747526402.3583424
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747526402.3615508,
+      "user": "bob",
+      "shared_by": "alice"
+    },
+    {
+      "action": "shared",
+      "timestamp": 1747526402.3673258,
+      "user": "charlie",
+      "shared_by": "alice"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747526424.6617682,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747526425.7573798,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747526453.1389847,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747526453.8479984,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747563454.075758,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747563454.972258,
+      "user": "system"
+    }
+  ],
+  "share_timestamps": {
+    "bob": 1747526402.3615508,
+    "charlie": 1747526402.3673258
+  }
+}

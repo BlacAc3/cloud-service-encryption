@@ -1,13 +1,53 @@
-{% extends "base.html" %}
-
-{% block title %}Cloud Storage - Cloud Service Encryption{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Cloud Storage - Cloud Service
+Encryption{% endblock %} {% block extra_css %}
+<style>
+    .file-entry {
+        transition: all 0.2s ease-in-out;
+    }
+    .file-entry:hover {
+        background-color: rgba(0, 123, 255, 0.05);
+    }
+    .share-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+    .owner-tag {
+        font-size: 0.75rem;
+        color: #6c757d;
+    }
+    .shared-icon {
+        color: #28a745;
+        margin-right: 5px;
+    }
+    .tabs-container {
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 1rem;
+    }
+    .file-tab {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+    }
+    .file-tab.active {
+        border-bottom: 2px solid #007bff;
+        font-weight: bold;
+    }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+</style>
+{% endblock %} {% block content %}
 <div class="row">
     <div class="col-12 mb-4">
         <div class="card shadow">
             <div class="card-header bg-success text-white">
-                <h3 class="card-title mb-0"><i class="bi bi-cloud"></i> Encrypted Cloud Storage</h3>
+                <h3 class="card-title mb-0">
+                    <i class="bi bi-cloud"></i> Encrypted Cloud Storage
+                </h3>
             </div>
         </div>
     </div>
@@ -16,112 +56,220 @@
 <div class="row">
     <!-- File Upload Section -->
     {% if can_upload %}
-    <div class="col-md-6 mb-4">
-        <div class="card shadow h-100">
+    <div class="col-md-12 mb-4">
+        <div class="card shadow">
             <div class="card-header bg-primary text-white">
-                <h4 class="card-title mb-0"><i class="bi bi-cloud-upload"></i> Upload Files</h4>
+                <h4 class="card-title mb-0">
+                    <i class="bi bi-cloud-upload"></i> Upload Files
+                </h4>
             </div>
             <div class="card-body">
                 <div class="alert alert-info">
-                    <i class="bi bi-info-circle"></i> Files are automatically encrypted with your symmetric key before being stored in the cloud.
+                    <i class="bi bi-info-circle"></i> Files are automatically
+                    encrypted with your symmetric key before being stored in the
+                    cloud.
                 </div>
-                
+
                 <form id="upload-form" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="file" class="form-label">Select file to upload</label>
-                        <input class="form-control" type="file" id="file" name="file" required>
+                        <label for="file" class="form-label"
+                            >Select file to upload</label
+                        >
+                        <input
+                            class="form-control"
+                            type="file"
+                            id="file"
+                            name="file"
+                            required
+                        />
                     </div>
-                    
+
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary" id="upload-btn">
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            id="upload-btn"
+                        >
                             <i class="bi bi-upload"></i> Upload & Encrypt
                         </button>
                     </div>
                 </form>
-                
-                <div class="mt-3" id="upload-progress-container" style="display: none;">
+
+                <div
+                    class="mt-3"
+                    id="upload-progress-container"
+                    style="display: none"
+                >
                     <label class="form-label">Upload Progress</label>
                     <div class="progress">
-                        <div id="upload-progress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                        <div
+                            id="upload-progress"
+                            class="progress-bar progress-bar-striped progress-bar-animated"
+                            role="progressbar"
+                            style="width: 0%"
+                        ></div>
                     </div>
                 </div>
-                
+
                 <div id="upload-result" class="mt-3"></div>
             </div>
         </div>
     </div>
     {% endif %}
-    
-    <!-- File Download Section -->
+
+    <!-- Files Section -->
     {% if can_view_files %}
-    <div class="col-md-{{ '6' if can_upload else '12' }} mb-4">
-        <div class="card shadow h-100">
+    <div class="col-md-12 mb-4">
+        <div class="card shadow">
             <div class="card-header bg-info text-white">
-                <h4 class="card-title mb-0"><i class="bi bi-cloud-download"></i> Cloud Files</h4>
+                <h4 class="card-title mb-0">
+                    <i class="bi bi-cloud-download"></i> Cloud Files
+                </h4>
             </div>
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="mb-0">Stored Files</h5>
-                    <button id="refresh-files" class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-arrow-clockwise"></i> Refresh
-                    </button>
+                <div class="tabs-container mb-3">
+                    <div class="file-tab active" id="my-files-tab">
+                        <i class="bi bi-file-earmark"></i> My Files
+                    </div>
+                    <div class="file-tab" id="shared-files-tab">
+                        <i class="bi bi-share"></i> Shared With Me
+                    </div>
                 </div>
-                
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover" id="files-table">
-                        <thead>
-                            <tr>
-                                <th>Filename</th>
-                                <th>Size</th>
-                                <th>Date</th>
-                                {% if can_download %}
-                                <th>Actions</th>
+
+                <!-- My Files Tab Content -->
+                <div class="tab-content active" id="my-files-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">My Files</h5>
+                        <button id="refresh-files" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-arrow-clockwise"></i> Refresh
+                        </button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="files-table">
+                            <thead>
+                                <tr>
+                                    <th>Filename</th>
+                                    <th>Size</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="files-table-body">
+                                {% for file in files %}
+                                <tr id="files-list-secure" style="display: None;">
+                                    <td>{{ file.name }}</td>
+                                    <td>{{ file.size }} bytes</td>
+                                    <td>{{ file.date_formatted|default(file.date) }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            {% if can_download %}
+                                            <a href="/api/download_file/{{ file.name }}" class="btn btn-sm btn-success" download>
+                                                <i class="bi bi-download"></i> Download
+                                            </a>
+                                            {% endif %}
+
+                                            {% if can_share_files %}
+                                            <button type="button" class="btn btn-sm btn-primary share-file-btn" data-file-id="{{ file.name }}">
+                                                <i class="bi bi-share"></i> Share
+                                            </button>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                {% if not files %}
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <em>No files found in cloud storage</em>
+                                    </td>
+                                </tr>
                                 {% endif %}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for file in files %}
-                            <tr>
-                                <td>{{ file.name }}</td>
-                                <td>{{ file.size }} bytes</td>
-                                <td>{{ file.date }}</td>
-                                {% if can_download %}
-                                <td>
-                                    <a href="/api/download_file/{{ file.name }}" class="btn btn-sm btn-success" download>
-                                        <i class="bi bi-download"></i> Download & Decrypt
-                                    </a>
-                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {% if not can_view_files %}
+                    <div class="alert alert-warning mt-3">
+                        <i class="bi bi-exclamation-triangle"></i> Your role ({{
+                        role }}) does not have permission to download files.
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Shared Files Tab Content -->
+                <div class="tab-content" id="shared-files-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Files Shared With Me</h5>
+                        <button id="refresh-shared-files" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-arrow-clockwise"></i> Refresh
+                        </button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="shared-files-table">
+                            <thead>
+                                <tr>
+                                    <th>Filename</th>
+                                    <th>Owner</th>
+                                    <th>Shared On</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for file in shared_files %}
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-share-fill shared-icon"></i>
+                                        {{ file.filename }}
+                                    </td>
+                                    <td>
+                                        <span class="owner-tag">{{ file.owner }}</span>
+                                    </td>
+                                    <td>{{ file.date_shared_formatted|default('Unknown') }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            {% if can_download %}
+                                            <a href="/api/download_shared_file/{{ file.file_id }}" class="btn btn-sm btn-success" download>
+                                                <i class="bi bi-download"></i> Download
+                                            </a>
+                                            {% endif %}
+
+                                            {% if can_share_files and file.is_owner %}
+                                            <button type="button" class="btn btn-sm btn-primary share-file-btn" data-file-id="{{ file.file_id }}">
+                                                <i class="bi bi-share"></i> Share
+                                            </button>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                {% if not shared_files %}
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <em>No files have been shared with you</em>
+                                    </td>
+                                </tr>
                                 {% endif %}
-                            </tr>
-                            {% endfor %}
-                            {% if not files %}
-                            <tr>
-                                <td colspan="{{ '4' if can_download else '3' }}" class="text-center">
-                                    <em>No files found in cloud storage</em>
-                                </td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                
-                {% if not can_download %}
-                <div class="alert alert-warning mt-3">
-                    <i class="bi bi-exclamation-triangle"></i> Your role ({{ role }}) does not have permission to download files.
-                </div>
-                {% endif %}
             </div>
         </div>
     </div>
     {% else %}
-    <div class="col-md-{{ '6' if can_upload else '12' }} mb-4">
-        <div class="card shadow h-100">
+    <div class="col-md-12 mb-4">
+        <div class="card shadow">
             <div class="card-header bg-secondary text-white">
-                <h4 class="card-title mb-0"><i class="bi bi-lock"></i> Restricted Access</h4>
+                <h4 class="card-title mb-0">
+                    <i class="bi bi-lock"></i> Restricted Access
+                </h4>
             </div>
             <div class="card-body">
                 <div class="alert alert-info">
-                    <i class="bi bi-info-circle"></i> Your role ({{ role }}) does not have permission to view encrypted files.
+                    <i class="bi bi-info-circle"></i> Your role ({{ role }})
+                    does not have permission to view encrypted files.
                 </div>
             </div>
         </div>
@@ -129,138 +277,161 @@
     {% endif %}
 </div>
 
+<!-- Share File Modal -->
+<div class="modal fade" id="shareFileModal" tabindex="-1" aria-labelledby="shareFileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shareFileModalLabel">Share File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="share-file-form">
+                    <input type="hidden" id="share-file-id" name="file_id">
+                    <div class="mb-3">
+                        <label for="share-recipients" class="form-label">Share with</label>
+                        <div id="user-list" class="form-control" style="height: 150px; overflow-y: scroll;">
+                            <!-- User list will be populated here by JavaScript -->
+                        </div>
+                        <div class="form-text">Select users to share this file with</div>
+                    </div>
+                </form>
+                <div id="share-result"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="share-submit-btn">Share</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 {% endblock %}
 
 {% block extra_js %}
+<script src="{{ url_for('static', filename='js/cloud.js') }}"></script>
 <script>
     $(document).ready(function() {
-        // Set up button handlers
-        $('#refresh-files').click(refreshFiles);
-        $('#upload-form').submit(uploadFile);
-        
-        function refreshFiles() {
-            $('#refresh-files').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
-            
-            $.get('/api/list_files', function(data) {
-                const tbody = $('#files-table tbody');
-                tbody.empty();
-                
-                if (data.files && data.files.length > 0) {
-                    data.files.forEach(function(file) {
-                        const downloadBtn = {% if can_download %} `
-                            <td>
-                                <a href="/api/download_file/${file.name}" class="btn btn-sm btn-success" download>
-                                    <i class="bi bi-download"></i> Download & Decrypt
-                                </a>
-                            </td>` {% else %} '' {% endif %};
-                        
-                        tbody.append(`
-                            <tr>
-                                <td>${file.name}</td>
-                                <td>${file.size} bytes</td>
-                                <td>${file.date}</td>
-                                ${downloadBtn}
-                            </tr>
+        // Function to populate the user list in the share modal
+        function populateUserList() {
+            $.get('/api/list_users', function(data) {
+                const userList = $('#user-list');
+                userList.empty();
+                console.log(data);
+                if (data.users && data.users.length > 0) {
+                    data.users.forEach(user => {
+                        userList.append(`
+                            <div class="form-check">
+                                <input class="form-check-input share-user-checkbox" type="checkbox" value="${user}" id="user-${user}">
+                                <label class="form-check-label" for="user-${user}">
+                                    ${user}
+                                </label>
+                            </div>
                         `);
                     });
                 } else {
-                    tbody.append(`
-                        <tr>
-                            <td colspan="{{ '4' if can_download else '3' }}" class="text-center">
-                                <em>No files found in cloud storage</em>
-                            </td>
-                        </tr>
-                    `);
+                    userList.append('<p>No users found.</p>');
                 }
-                
-                $('#refresh-files').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i> Refresh');
             }).fail(function() {
-                showAlert('danger', 'Failed to refresh file list');
-                $('#refresh-files').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i> Refresh');
+                $('#user-list').append('<p>Failed to load users.</p>');
             });
         }
-        
-        function uploadFile(e) {
-            e.preventDefault();
-            
-            const fileInput = $('#file')[0];
-            if (!fileInput.files || fileInput.files.length === 0) {
-                showAlert('warning', 'Please select a file to upload');
+
+        // Tab switching functionality
+        $('#my-files-tab').click(function() {
+            $('.file-tab').removeClass('active');
+            $(this).addClass('active');
+            $('.tab-content').removeClass('active');
+            $('#my-files-content').addClass('active');
+        });
+
+        $('#shared-files-tab').click(function() {
+            $('.file-tab').removeClass('active');
+            $(this).addClass('active');
+            $('.tab-content').removeClass('active');
+            $('#shared-files-content').addClass('active');
+        });
+
+        // Share file button handler
+        $('.share-file-btn').click(function() {
+            const fileId = $(this).data('file-id');
+            $('#share-file-id').val(fileId);
+            $('#shareFileModalLabel').text('Share File: ' + fileId);
+            $('#share-recipients').val('');
+            $('#share-result').html('');
+            // Populate the user list when the modal is shown
+            populateUserList();
+            $('#shareFileModal').modal('show');
+        });
+
+        // Share submit button handler
+        $('#share-submit-btn').click(function() {
+            const fileId = $('#share-file-id').val();
+            let recipients = $('.share-user-checkbox:checked') .map(function() {
+                return this.value.trim();
+              }).get(); // `.get()` converts the jQuery object into a true array
+
+            console.log(recipients);
+
+            if (recipients.length === 0) {
+                $('#share-result').html('<div class="alert alert-warning">Please enter at least one recipient</div>');
                 return;
             }
-            
-            // Create FormData object
-            const formData = new FormData();
-            formData.append('file', fileInput.files[0]);
-            
-            // Show progress
-            $('#upload-progress-container').show();
-            $('#upload-progress').css('width', '0%');
-            $('#upload-btn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Uploading...');
-            
+
+            $(this).prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Sharing...');
+
             $.ajax({
-                url: '/api/upload_file',
+                url: '/api/share_file',
                 type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                xhr: function() {
-                    const xhr = new window.XMLHttpRequest();
-                    xhr.upload.addEventListener('progress', function(e) {
-                        if (e.lengthComputable) {
-                            const percent = Math.round((e.loaded / e.total) * 100);
-                            $('#upload-progress').css('width', percent + '%').text(percent + '%');
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    file_id: fileId,
+                    recipients: recipients
+                }),
+                success: function(response) {
+                    if (response.success) {
+                        $('#share-result').html(`<div class="alert alert-success">
+                            <i class="bi bi-check-circle"></i> ${response.message}
+                        </div>`);
+                        // Clear the recipients after a successful share
+                        $('#share-recipients').val('');
+                        // Clear the user list after a successful share
+                        populateUserList();
+
+                        if (response.errors && response.errors.length > 0) {
+                            let errorHtml = '<ul class="mb-0">';
+                            response.errors.forEach(err => {
+                                errorHtml += `<li>${err}</li>`;
+                            });
+                            errorHtml += '</ul>';
+
+                            $('#share-result').append(`<div class="alert alert-warning mt-2">
+                                <i class="bi bi-exclamation-triangle"></i> Some users couldn't be shared with:
+                                ${errorHtml}
+                            </div>`);
                         }
-                    }, false);
-                    return xhr;
-                },
-                success: function(data) {
-                    $('#upload-progress').css('width', '100%').text('100%');
-                    showAlert('success', data.message);
-                    $('#upload-result').html(`<div class="alert alert-success">
-                        <i class="bi bi-check-circle"></i> ${data.message}
-                    </div>`);
-                    
-                    // Reset form and refresh file list
-                    $('#file').val('');
-                    refreshFiles();
-                    
-                    // Reset button
-                    $('#upload-btn').prop('disabled', false).html('<i class="bi bi-upload"></i> Upload & Encrypt');
-                    
-                    // Hide progress after a delay
-                    setTimeout(function() {
-                        $('#upload-progress-container').fadeOut();
-                    }, 3000);
+                    } else {
+                        $('#share-result').html(`<div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle"></i> ${response.error || "Failed to share file"}
+                        </div>`);
+                    }
+
+                    $('#share-submit-btn').prop('disabled', false).text('Share');
                 },
                 error: function(xhr) {
-                    $('#upload-progress').removeClass('bg-primary').addClass('bg-danger');
-                    showAlert('danger', 'Error: ' + (xhr.responseJSON?.error || 'Upload failed'));
-                    $('#upload-result').html(`<div class="alert alert-danger">
-                        <i class="bi bi-exclamation-triangle"></i> Upload failed: ${xhr.responseJSON?.error || 'Unknown error'}
+                    $('#share-result').html(`<div class="alert alert-danger">
+                        <i class="bi bi-exclamation-triangle"></i> ${xhr.responseJSON?.error || "Failed to share file"}
                     </div>`);
-                    
-                    // Reset button
-                    $('#upload-btn').prop('disabled', false).html('<i class="bi bi-upload"></i> Upload & Encrypt');
+                    $('#share-submit-btn').prop('disabled', false).text('Share');
                 }
             });
-        }
-        
-        function showAlert(type, message) {
-            const alert = $(`<div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                ${message}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>`);
-            
-            // Insert at the top of the content area
-            $('.content-alert-container').append(alert);
-            
-            // Auto-dismiss after 5 seconds
-            setTimeout(function() {
-                alert.alert('close');
-            }, 5000);
-        }
+        });
+
+        // Initialize refresh for shared files
+        $('#refresh-shared-files').click(function() {
+            refreshSharedFiles();
+        });
     });
 </script>
 {% endblock %}

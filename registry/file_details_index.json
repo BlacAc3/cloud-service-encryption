@@ -1,0 +1,71 @@
+{
+  "files_by_name": {
+    "main.py.encrypted": [
+      "1e81c7a7-34b3-495b-8d41-c38e2d370899"
+    ],
+    "sample1.csv.encrypted": [
+      "a87078ed-478d-4c49-bb5b-012c219161df"
+    ],
+    "metadata.json": [
+      "7f221843-8061-42ee-be8a-de1fe17ade33"
+    ],
+    "8e19a195-3737-4b90-8e16-c24b3b6c5cef": [
+      "e289c752-fe06-40a6-abb4-60d062b6d5ef"
+    ],
+    "encrypted_text_1747487035.txt": [
+      "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e"
+    ],
+    "brave_screenshot_localhost_1.png.encrypted": [
+      "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
+      "c26c4723-05df-46f3-9858-fc4a89eac5e1"
+    ],
+    "encrypted_text_1747494097.txt": [
+      "bd0657b1-3b44-49be-bee4-bcff3fd7829f"
+    ],
+    "jacc_json.txt.encrypted": [
+      "b4612554-8a6d-40b8-a154-71f33e09a52e",
+      "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+    ]
+  },
+  "files_by_hash": {
+    "e12ddc6538d363c18e57d219f9f2ec996aca22ccb35bab3b2af741fb3a009626": "1e81c7a7-34b3-495b-8d41-c38e2d370899",
+    "51f20e31d6a1d66b9df54530d9581b75169aaa760b194bac0bdc83386c7a0279": "a87078ed-478d-4c49-bb5b-012c219161df",
+    "de7bffe482648ac6145bcf05b53aea05dce62441839170a34754696497ff6bb1": "7f221843-8061-42ee-be8a-de1fe17ade33",
+    "f6455968c451ab1fe77b7c5f3bcaf732f5aac64cbcacac5eb236f473f7d09a28": "e289c752-fe06-40a6-abb4-60d062b6d5ef",
+    "2a6f27a3055bb6ec2302fa51c923dff72bf9f5e917ca1a67ac8be9badae6fc61": "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
+    "dae0275f6eaeff2eaee75343e9ff494d2ca9b39143099a40cad4fc609a22c213": "c26c4723-05df-46f3-9858-fc4a89eac5e1",
+    "63c1027cb5cc6749c5e27c548f1476a2c0b73ce9f5914273c79a365d52561846": "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
+    "6c3e5fb9154878557e47895e561dee2ab6f17edf6b39544fb2b882339738f9b5": "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+  },
+  "files_by_owner": {
+    "system": [
+      "1e81c7a7-34b3-495b-8d41-c38e2d370899",
+      "a87078ed-478d-4c49-bb5b-012c219161df",
+      "7f221843-8061-42ee-be8a-de1fe17ade33",
+      "e289c752-fe06-40a6-abb4-60d062b6d5ef",
+      "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
+      "c26c4723-05df-46f3-9858-fc4a89eac5e1",
+      "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+    ],
+    "alice": [
+      "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
+      "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
+      "b4612554-8a6d-40b8-a154-71f33e09a52e"
+    ]
+  },
+  "shared_files": {
+    "bob": [
+      "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
+      "b4612554-8a6d-40b8-a154-71f33e09a52e"
+    ],
+    "charlie": [
+      "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
+      "b4612554-8a6d-40b8-a154-71f33e09a52e"
+    ]
+  },
+  "metadata": {
+    "created": 1747486731.9933836,
+    "last_updated": 1747563092.464375,
+    "version": "1.0"
+  }
+}

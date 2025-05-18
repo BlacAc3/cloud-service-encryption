@@ -1,0 +1,141 @@
+{
+  "files": {
+    "1e81c7a7-34b3-495b-8d41-c38e2d370899": {
+      "filename": "main.py.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747486732.0589747,
+      "last_accessed": 1747564565.1839733,
+      "shared_with": [],
+      "metadata": {
+        "last_downloaded": 1747487365.3849154,
+        "downloaded_by": "alice"
+      }
+    },
+    "a87078ed-478d-4c49-bb5b-012c219161df": {
+      "filename": "sample1.csv.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747486732.1789641,
+      "last_accessed": 1747564565.1934884,
+      "shared_with": [],
+      "metadata": {
+        "last_downloaded": 1747487359.6976728,
+        "downloaded_by": "alice"
+      }
+    },
+    "7f221843-8061-42ee-be8a-de1fe17ade33": {
+      "filename": "metadata.json",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747486732.1812449,
+      "last_accessed": 1747564565.2046232,
+      "shared_with": []
+    },
+    "e289c752-fe06-40a6-abb4-60d062b6d5ef": {
+      "filename": "8e19a195-3737-4b90-8e16-c24b3b6c5cef",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747486732.2519395,
+      "last_accessed": 1747564565.2146978,
+      "shared_with": []
+    },
+    "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e": {
+      "filename": "encrypted_text_1747487035.txt",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747487184.5823653,
+      "last_accessed": 1747564565.2224226,
+      "shared_with": [],
+      "metadata": {
+        "last_downloaded": 1747487370.0533123,
+        "downloaded_by": "alice"
+      }
+    },
+    "3f6f70d4-aa51-4edb-a346-a7b5d9503155": {
+      "filename": "brave_screenshot_localhost_1.png.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747487391.5659873,
+      "last_accessed": 1747563454.9003925,
+      "shared_with": [
+        "bob",
+        "charlie"
+      ],
+      "share_timestamps": {
+        "bob": 1747524387.877135,
+        "charlie": 1747525221.8147023
+      }
+    },
+    "c26c4723-05df-46f3-9858-fc4a89eac5e1": {
+      "filename": "brave_screenshot_localhost_1.png.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747488018.7940187,
+      "last_accessed": 1747564565.2294188,
+      "shared_with": []
+    },
+    "bd0657b1-3b44-49be-bee4-bcff3fd7829f": {
+      "filename": "encrypted_text_1747494097.txt",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747494100.283638,
+      "last_accessed": 1747564565.2339659,
+      "shared_with": []
+    },
+    "b4612554-8a6d-40b8-a154-71f33e09a52e": {
+      "filename": "jacc_json.txt.encrypted",
+      "owner": "alice",
+      "type": "standard",
+      "created": 1747526388.7305481,
+      "last_accessed": 1747563454.972258,
+      "shared_with": [
+        "bob",
+        "charlie"
+      ],
+      "share_timestamps": {
+        "bob": 1747526402.3615508,
+        "charlie": 1747526402.3673258
+      }
+    },
+    "0f917d8c-ec3b-444a-98d0-c664212e21fb": {
+      "filename": "jacc_json.txt.encrypted",
+      "owner": "system",
+      "type": "standard",
+      "created": 1747563092.453228,
+      "last_accessed": 1747564501.7096682,
+      "shared_with": []
+    }
+  },
+  "owners": {
+    "system": {
+      "files": [
+        "1e81c7a7-34b3-495b-8d41-c38e2d370899",
+        "a87078ed-478d-4c49-bb5b-012c219161df",
+        "7f221843-8061-42ee-be8a-de1fe17ade33",
+        "e289c752-fe06-40a6-abb4-60d062b6d5ef",
+        "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e",
+        "c26c4723-05df-46f3-9858-fc4a89eac5e1",
+        "0f917d8c-ec3b-444a-98d0-c664212e21fb"
+      ],
+      "first_seen": 1747486732.0589747,
+      "last_activity": 1747564565.2339659
+    },
+    "alice": {
+      "files": [
+        "3f6f70d4-aa51-4edb-a346-a7b5d9503155",
+        "bd0657b1-3b44-49be-bee4-bcff3fd7829f",
+        "b4612554-8a6d-40b8-a154-71f33e09a52e"
+      ],
+      "first_seen": 1747487391.5659873,
+      "last_activity": 1747563454.991431
+    }
+  },
+  "metadata": {
+    "created": 1747486731.9927974,
+    "last_updated": 1747564565.2389426,
+    "version": "1.0",
+    "file_count": 10,
+    "owner_count": 2
+  }
+}
