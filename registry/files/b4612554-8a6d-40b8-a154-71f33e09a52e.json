@@ -4,7 +4,7 @@
   "owner": "alice",
   "type": "standard",
   "created": 1747526388.7305481,
-  "last_accessed": 1747563454.972258,
+  "last_accessed": 1747566224.4934888,
   "last_modified": 1747526388.7305481,
   "shared_with": [
     "bob",
@@ -73,6 +73,16 @@
     {
       "action": "name_lookup",
       "timestamp": 1747563454.972258,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747566223.2507663,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747566224.4934888,
       "user": "system"
     }
   ],

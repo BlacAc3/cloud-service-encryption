@@ -130,9 +130,15 @@ def rsa_decrypt(private_key, ciphertext):
 
 class RBACSystem:
     _users = {
-        "alice": {"role": "admin", "password": "alice123", "salt": "salt_for_alice"},
+        "alice": {"role": "admin", "password": "alice123" },
         "bob": {"role": "viewer", "password": "bob123", "salt": "salt_for_bob"},
         "charlie": {"role": "editor", "password": "charlie123", "salt": "salt_for_charlie"}
+    }
+
+    _demo_users = {
+        "alice": {"role": "admin", "password": "alice123" },
+        "bob": {"role": "viewer", "password": "bob123"},
+        "charlie": {"role": "editor", "password": "charlie123"}
     }
 
     roles_permissions = {
@@ -143,12 +149,12 @@ class RBACSystem:
 
     def __init__(self):
         # Pre-hash passwords for the existing users.  In a real system, this would be done at initial user creation.
-        for username, user_data in self._users.items():
-            if not user_data["password"].startswith("hashed_"): # Only hash if not already hashed
-                salt = secrets.token_hex(16)
-                hashed_password = self._hash_password(user_data["password"], salt)
-                user_data["password"] = hashed_password
-                user_data["salt"] = salt
+        for i, (username, user_data) in enumerate(self._demo_users.items()):
+            salt = secrets.token_hex(16)
+            hashed_password = self._hash_password(user_data["password"], salt)
+            user_data["password"] = hashed_password
+            user_data["salt"] = salt
+            self._users[username] = user_data
 
 
     def _hash_password(self, password, salt=None):
@@ -158,12 +164,12 @@ class RBACSystem:
         hashed_password = hashlib.sha256(salted_password).hexdigest()
         return hashed_password
 
-    @classmethod
-    def add_user(cls, username, role, password):
-        if username not in cls._users:
+    def add_user(self, username, role, password):
+        if username not in self._users:
             salt = secrets.token_hex(16)
-            hashed_password = cls._hash_password(password, salt)
-            cls._users[username] = {"role": role, "password": hashed_password, "salt": salt}
+            print(password)
+            hashed_password = self._hash_password(password, salt)
+            self._users[username] = {"role": role, "password": hashed_password, "salt": salt}
             return True
         return False
 
@@ -175,12 +181,13 @@ class RBACSystem:
         user = self._users.get(username)
         if not user:
             return False
-
         salt = user.get("salt")
         if not salt:
             return False
 
         hashed_input = self._hash_password(password, salt)
+        print(user["password"])
+        print(hashed_input)
         return user["password"] == hashed_input
 
     def is_authorized(self, username, action):

@@ -4,14 +4,14 @@
   "owner": "system",
   "type": "standard",
   "created": 1747487184.5823653,
-  "last_accessed": 1747564565.2224226,
+  "last_accessed": 1747566224.3612123,
   "last_modified": 1747487184.5823653,
   "shared_with": [],
   "metadata": {
     "size": 100,
     "created": 1747487035.9424596,
     "modified": 1747487035.9424596,
-    "scan_date": 1747564565.2220907,
+    "scan_date": 1747566182.567599,
     "source_directory": "/home/aaron/02_Work/01_Pending/cloud-service-encryption/cloud_storage",
     "file_hash": "2a6f27a3055bb6ec2302fa51c923dff72bf9f5e917ca1a67ac8be9badae6fc61"
   },
@@ -1020,6 +1020,96 @@
     {
       "action": "accessed",
       "timestamp": 1747564565.2224226,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747564716.1482382,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747564718.1670108,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747564810.6008375,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747564826.6893623,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747564879.1293564,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565040.90188,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565101.0682747,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565105.9773917,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565207.3733087,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565290.6280732,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565554.1300848,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565716.4166887,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565785.3724706,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747565874.310214,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566128.5673366,
+      "user": "system"
+    },
+    {
+      "action": "accessed",
+      "timestamp": 1747566182.5679169,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747566222.961992,
+      "user": "system"
+    },
+    {
+      "action": "name_lookup",
+      "timestamp": 1747566224.3612123,
       "user": "system"
     }
   ]

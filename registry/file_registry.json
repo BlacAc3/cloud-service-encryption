@@ -5,7 +5,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.0589747,
-      "last_accessed": 1747564565.1839733,
+      "last_accessed": 1747566224.238835,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487365.3849154,
@@ -17,7 +17,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.1789641,
-      "last_accessed": 1747564565.1934884,
+      "last_accessed": 1747566224.2535422,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487359.6976728,
@@ -29,7 +29,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.1812449,
-      "last_accessed": 1747564565.2046232,
+      "last_accessed": 1747566224.305411,
       "shared_with": []
     },
     "e289c752-fe06-40a6-abb4-60d062b6d5ef": {
@@ -37,7 +37,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747486732.2519395,
-      "last_accessed": 1747564565.2146978,
+      "last_accessed": 1747566224.3506007,
       "shared_with": []
     },
     "6a0c5efa-c3b1-419e-9877-0f1fcb6d8b6e": {
@@ -45,7 +45,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747487184.5823653,
-      "last_accessed": 1747564565.2224226,
+      "last_accessed": 1747566224.3612123,
       "shared_with": [],
       "metadata": {
         "last_downloaded": 1747487370.0533123,
@@ -57,7 +57,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747487391.5659873,
-      "last_accessed": 1747563454.9003925,
+      "last_accessed": 1747566224.397597,
       "shared_with": [
         "bob",
         "charlie"
@@ -72,7 +72,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747488018.7940187,
-      "last_accessed": 1747564565.2294188,
+      "last_accessed": 1747566182.575431,
       "shared_with": []
     },
     "bd0657b1-3b44-49be-bee4-bcff3fd7829f": {
@@ -80,7 +80,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747494100.283638,
-      "last_accessed": 1747564565.2339659,
+      "last_accessed": 1747566224.481462,
       "shared_with": []
     },
     "b4612554-8a6d-40b8-a154-71f33e09a52e": {
@@ -88,7 +88,7 @@
       "owner": "alice",
       "type": "standard",
       "created": 1747526388.7305481,
-      "last_accessed": 1747563454.972258,
+      "last_accessed": 1747566224.4934888,
       "shared_with": [
         "bob",
         "charlie"
@@ -103,7 +103,7 @@
       "owner": "system",
       "type": "standard",
       "created": 1747563092.453228,
-      "last_accessed": 1747564565.241008,
+      "last_accessed": 1747566182.586895,
       "shared_with": []
     }
   },
@@ -119,7 +119,7 @@
         "0f917d8c-ec3b-444a-98d0-c664212e21fb"
       ],
       "first_seen": 1747486732.0589747,
-      "last_activity": 1747564565.241008
+      "last_activity": 1747566182.586895
     },
     "alice": {
       "files": [
@@ -133,7 +133,7 @@
   },
   "metadata": {
     "created": 1747486731.9927974,
-    "last_updated": 1747564565.2420282,
+    "last_updated": 1747566224.4947011,
     "version": "1.0",
     "file_count": 10,
     "owner_count": 2
